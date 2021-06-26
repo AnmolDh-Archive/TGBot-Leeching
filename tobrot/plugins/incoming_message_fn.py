@@ -133,10 +133,7 @@ async def incoming_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     current_user_id = message.from_user.id
-    credit = await message.reply_text(
-        f"Downloading for you <a href='tg://user?id={current_user_id}'></a>",
-        parse_mode="html",
-    )
+    #credit = await message.reply_text(f"Downloading for you <a href='tg://user?id={current_user_id}'></a>",parse_mode="html",)
     i_m_sefg = await message.reply_text("processing...", quote=True)
     # LOGGER.info(message)
     # extract link from message
@@ -208,10 +205,8 @@ async def g_yt_playlist(client, message):
         await message.reply_text("No downloading source provided", quote=True)
         return
     if "youtube.com/playlist" in url:
-        i_m_sefg = await message.reply_text(
-            f"Downloading for you <a href='tg://user?id={usr_id}'></a>",
-            parse_mode="html",
-        )
+        #i_m_sefg = await message.reply_text(f"Downloading for you <a href='tg://user?id={usr_id}'></a>", parse_mode="html",)
+        i_m_sefg = await message.reply_text("processing...", quote=True)
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
 
     else:
