@@ -40,6 +40,8 @@ from tobrot import (
     GYTDL_COMMAND,
     GPYTDL_COMMAND,
     RENAME_COMMAND,
+    TOGGLE_DOC,
+    TOGGLE_STREAM
 )
 from tobrot.helper_funcs.download import down_load_media_f
 from tobrot.plugins.call_back_button_handler import button
@@ -107,14 +109,14 @@ if __name__ == "__main__":
     incoming_Jigar_upload_as_doc = MessageHandler(
         upload_as_doc,
         filters=filters.command(
-            ["toggle_doc"]) & filters.chat(chats=AUTH_CHANNEL)
+            ["TOGGLE_DOC"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_Jigar_upload_as_doc)
     #
     incoming_Jigar_upload_as_stream = MessageHandler(
         upload_as_stream,
         filters=filters.command(
-            ["toggle_stream"]) & filters.chat(chats=AUTH_CHANNEL)
+            ["TOGGLE_STREAM"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_Jigar_upload_as_stream)
     #
