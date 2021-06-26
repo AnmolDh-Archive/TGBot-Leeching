@@ -109,14 +109,14 @@ if __name__ == "__main__":
     incoming_Jigar_upload_as_doc = MessageHandler(
         upload_as_doc,
         filters=filters.command(
-            ["TOGGLE_DOC"]) & filters.chat(chats=AUTH_CHANNEL)
+            [f"{TOGGLE_DOC}"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_Jigar_upload_as_doc)
     #
     incoming_Jigar_upload_as_stream = MessageHandler(
         upload_as_stream,
         filters=filters.command(
-            ["TOGGLE_STREAM"]) & filters.chat(chats=AUTH_CHANNEL)
+            [f"{TOGGLE_STREAM}"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_Jigar_upload_as_stream)
     #
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     #
     rename_message_handler = MessageHandler(
         rename_tg_file,
-        filters=filters.command(["RENAME_COMMAND"]) & filters.chat(chats=AUTH_CHANNEL),
+        filters=filters.command([f"{RENAME_COMMAND}"]) & filters.chat(chats=AUTH_CHANNEL),
     )
     app.add_handler(rename_message_handler)
     #
