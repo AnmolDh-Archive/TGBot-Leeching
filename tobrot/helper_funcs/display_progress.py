@@ -89,7 +89,7 @@ class Progress:
                 round(percentage, 2),
             )
 
-            tmp = progress + " <b>│</b>\n<b> ├ Completed:</b> {0} of {1} \n<b> │</b>\n<b> ├ Speed:</b> {2}/s\n<b> │</b>\n<b> ├ ETA:</b> {3}\n │\n ╰── ⌊ Using Engine Pyrogram ⌉".format(
+            tmp = progress + " <b>│</b>\n<b> ├Completed:</b> {0} of {1} \n<b> │</b>\n<b> ├Speed:</b> {2}/s\n<b> │</b>\n<b> ├ETA:</b> {3}\n │\n ╰── ⌊ Using Engine Pyrogram ⌉".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
