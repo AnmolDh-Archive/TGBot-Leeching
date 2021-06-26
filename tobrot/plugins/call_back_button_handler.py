@@ -33,7 +33,7 @@ async def button(bot, update: CallbackQuery):
         else:
             await bot.answer_callback_query(
                 callback_query_id=update.id,
-                text="who are you? 🤪🤔🤔🤔",
+                text="who are you?",
                 show_alert=True,
                 cache_time=0,
             )
@@ -83,7 +83,7 @@ async def button(bot, update: CallbackQuery):
         else:
             await bot.answer_callback_query(
                 callback_query_id=update.id,
-                text="who are you? 🤪🤔🤔🤔",
+                text="who are you?",
                 show_alert=True,
                 cache_time=0,
             )
@@ -128,13 +128,13 @@ async def button(bot, update: CallbackQuery):
                         os.remove(f)
                     else:
                         shutil.rmtree(f)
-                await update.message.edit_text(f"Deleted {len(g_del_list)} objects 😬")
+                await update.message.edit_text(f"Deleted {len(g_del_list)} objects")
             else:
-                await update.message.edit_text("Nothing to clear 🙄")
+                await update.message.edit_text("Nothing to clear")
         else:
-            await update.message.edit_text("You are not allowed to do that 🤭")
+            await update.message.edit_text("You are not allowed to do that")
     elif cb_data == "fuckoff":
         await bot.answer_callback_query(
             update.id, text="trying to cancel...", show_alert=False
         )
-        await update.message.edit_text("Okay! fine 🤬")
+        await update.message.edit_text("Okay! fine")
